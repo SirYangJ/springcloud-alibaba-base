@@ -1,0 +1,7 @@
+#springcloud基础架构
+项目使用了springcloud-alibaba+springboot+mybatis架构
+springcloud-alibaba使用了nacos作为订阅中心，Feign作为远程调用
+注意：因为项目中使用了lombok，所以开发工具需要安装lombok插件，请自行安装插件
+#项目启动
+创建test数据库，执行test.sql脚本
+项目启动前要先启动nacos，对应修改consumer和provider子项目的nacos的配置

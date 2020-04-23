@@ -1,0 +1,30 @@
+# 端口
+server:
+  port: 9090
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000
+    max-connections: 20000
+    min-SpareThreads: 20
+    acceptCount: 700
+spring:
+  application:
+    name: alibaba-cloud-provider
+  profiles:
+    active: dev
+  main:
+    # Spring Boot 2.1 需要设定
+    allow-bean-definition-overriding: true
+  #设置nacos
+  cloud:
+    nacos:
+      discovery:
+        enabled: true
+        register-enabled: true
+        server-addr: 127.0.0.1:8848
+#设置mybatis的xml扫描路径
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  #设置sql打印
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

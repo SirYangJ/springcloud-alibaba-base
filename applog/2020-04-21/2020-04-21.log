@@ -1,0 +1,76 @@
+2020-04-21 08:34:36 -The following profiles are active: dev
+2020-04-21 08:34:37 -BeanFactory id=05427765-2919-34f3-9f2d-d20638feede0
+2020-04-21 08:34:37 -Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$71fbcb57] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-21 08:34:37 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$55e1c85a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-21 08:34:37 -Tomcat initialized with port(s): 9090 (http)
+2020-04-21 08:34:37 -Initializing ProtocolHandler ["http-nio-9090"]
+2020-04-21 08:34:37 -Starting service [Tomcat]
+2020-04-21 08:34:37 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-04-21 08:34:37 -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/yang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2020-04-21 08:34:37 -Initializing Spring embedded WebApplicationContext
+2020-04-21 08:34:37 -Root WebApplicationContext: initialization completed in 1069 ms
+2020-04-21 08:34:38 -No URLs will be polled as dynamic configuration sources.
+2020-04-21 08:34:38 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-21 08:34:38 -No URLs will be polled as dynamic configuration sources.
+2020-04-21 08:34:38 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-21 08:34:38 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-21 08:34:38 -Initializing ExecutorService
+2020-04-21 08:34:38 -Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-04-21 08:34:38 -Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-04-21 08:34:38 -Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-04-21 08:34:38 -Clear EntityHelper entityTableMap cache.
+2020-04-21 08:34:38 -Starting ProtocolHandler ["http-nio-9090"]
+2020-04-21 08:34:38 -Tomcat started on port(s): 9090 (http) with context path ''
+2020-04-21 08:34:38 -nacos registry, alibaba-cloud-provider 192.168.199.125:9090 register finished
+2020-04-21 08:34:38 -Started ProviderApplication in 3.306 seconds (JVM running for 4.004)
+2020-04-21 08:34:43 -No active profile set, falling back to default profiles: default
+2020-04-21 08:34:44 -Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format.
+2020-04-21 08:34:44 -Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-21 08:34:44 -BeanFactory id=8b0d7cd3-15cf-35d5-8118-28d9286ad6e5
+2020-04-21 08:34:44 -Bean 'com.example.consumer.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-21 08:34:44 -Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$25a00ce0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-21 08:34:44 -Tomcat initialized with port(s): 9095 (http)
+2020-04-21 08:34:44 -Initializing ProtocolHandler ["http-nio-9095"]
+2020-04-21 08:34:44 -Starting service [Tomcat]
+2020-04-21 08:34:44 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-04-21 08:34:44 -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/yang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2020-04-21 08:34:44 -Initializing Spring embedded WebApplicationContext
+2020-04-21 08:34:44 -Root WebApplicationContext: initialization completed in 1112 ms
+2020-04-21 08:34:45 -No URLs will be polled as dynamic configuration sources.
+2020-04-21 08:34:45 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-21 08:34:45 -No URLs will be polled as dynamic configuration sources.
+2020-04-21 08:34:45 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-21 08:34:45 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-21 08:34:45 -Initializing ExecutorService
+2020-04-21 08:34:45 -Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-21 08:34:46 -Starting ProtocolHandler ["http-nio-9095"]
+2020-04-21 08:34:46 -Tomcat started on port(s): 9095 (http) with context path ''
+2020-04-21 08:34:46 -nacos registry, alibaba-cloud-consumer 192.168.199.125:9095 register finished
+2020-04-21 08:34:46 -Started ConsumerApplication in 3.112 seconds (JVM running for 3.666)
+2020-04-21 08:34:46 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-21 08:34:46 -Initializing Servlet 'dispatcherServlet'
+2020-04-21 08:34:46 -Completed initialization in 6 ms
+2020-04-21 08:34:51 -Flipping property: alibaba-cloud-provider.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-04-21 08:34:51 -Client: alibaba-cloud-provider instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=alibaba-cloud-provider,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-04-21 08:34:51 -Using serverListUpdater PollingServerListUpdater
+2020-04-21 08:34:51 -Flipping property: alibaba-cloud-provider.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-04-21 08:34:51 -DynamicServerListLoadBalancer for client alibaba-cloud-provider initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=alibaba-cloud-provider,current list of Servers=[192.168.199.125:9090],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.199.125:9090;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.alibaba.nacos.ribbon.NacosServerList@7cd0137d
+2020-04-21 08:34:51 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-21 08:34:51 -Initializing Servlet 'dispatcherServlet'
+2020-04-21 08:34:51 -Completed initialization in 6 ms
+2020-04-21 08:34:51 -HikariPool-1 - Starting...
+2020-04-21 08:34:51 -Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-04-21 08:34:52 -HikariPool-1 - Start completed.
+2020-04-21 08:34:52 -数据查询成功！
+2020-04-21 08:34:52 -Flipping property: alibaba-cloud-provider.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-04-21 08:35:26 -De-registering from Nacos Server now...
+2020-04-21 08:35:26 -De-registration finished.
+2020-04-21 08:35:26 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-21 08:35:26 -HikariPool-1 - Shutdown initiated...
+2020-04-21 08:35:26 -HikariPool-1 - Shutdown completed.
+2020-04-21 08:35:28 -Shutting down the Executor Pool for PollingServerListUpdater
+2020-04-21 08:35:28 -De-registering from Nacos Server now...
+2020-04-21 08:35:28 -De-registration finished.
+2020-04-21 08:35:28 -Shutting down ExecutorService 'applicationTaskExecutor'

@@ -1,0 +1,309 @@
+2020-04-20 17:24:42 -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-04-20 17:25:05 -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-04-20 17:26:19 -Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [/Users/yang/Documents/IdeaProjects/springcloud-alibaba-base/alibaba-cloud-provider-demo/target/classes/com/example/provider/dao/UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [tk/mybatis/mapper/autoconfigure/MapperAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/yang/Documents/IdeaProjects/springcloud-alibaba-base/alibaba-cloud-provider-demo/target/classes/mapper/UserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/yang/Documents/IdeaProjects/springcloud-alibaba-base/alibaba-cloud-provider-demo/target/classes/mapper/UserMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.springboot.pojo.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.springboot.pojo.User
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.example.provider.ProviderApplication.main(ProviderApplication.java:12)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [/Users/yang/Documents/IdeaProjects/springcloud-alibaba-base/alibaba-cloud-provider-demo/target/classes/com/example/provider/dao/UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [tk/mybatis/mapper/autoconfigure/MapperAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/yang/Documents/IdeaProjects/springcloud-alibaba-base/alibaba-cloud-provider-demo/target/classes/mapper/UserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/yang/Documents/IdeaProjects/springcloud-alibaba-base/alibaba-cloud-provider-demo/target/classes/mapper/UserMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.springboot.pojo.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.springboot.pojo.User
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [/Users/yang/Documents/IdeaProjects/springcloud-alibaba-base/alibaba-cloud-provider-demo/target/classes/com/example/provider/dao/UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [tk/mybatis/mapper/autoconfigure/MapperAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/yang/Documents/IdeaProjects/springcloud-alibaba-base/alibaba-cloud-provider-demo/target/classes/mapper/UserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/yang/Documents/IdeaProjects/springcloud-alibaba-base/alibaba-cloud-provider-demo/target/classes/mapper/UserMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.springboot.pojo.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.springboot.pojo.User
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1499)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1379)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 32 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [tk/mybatis/mapper/autoconfigure/MapperAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/yang/Documents/IdeaProjects/springcloud-alibaba-base/alibaba-cloud-provider-demo/target/classes/mapper/UserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/yang/Documents/IdeaProjects/springcloud-alibaba-base/alibaba-cloud-provider-demo/target/classes/mapper/UserMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.springboot.pojo.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.springboot.pojo.User
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1305)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1144)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1484)
+	... 43 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/yang/Documents/IdeaProjects/springcloud-alibaba-base/alibaba-cloud-provider-demo/target/classes/mapper/UserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/yang/Documents/IdeaProjects/springcloud-alibaba-base/alibaba-cloud-provider-demo/target/classes/mapper/UserMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.springboot.pojo.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.springboot.pojo.User
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 56 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/yang/Documents/IdeaProjects/springcloud-alibaba-base/alibaba-cloud-provider-demo/target/classes/mapper/UserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/yang/Documents/IdeaProjects/springcloud-alibaba-base/alibaba-cloud-provider-demo/target/classes/mapper/UserMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.springboot.pojo.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.springboot.pojo.User
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:523)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:547)
+	at tk.mybatis.mapper.autoconfigure.MapperAutoConfiguration.sqlSessionFactory(MapperAutoConfiguration.java:156)
+	at tk.mybatis.mapper.autoconfigure.MapperAutoConfiguration$$EnhancerBySpringCGLIB$$893ca376.CGLIB$sqlSessionFactory$2(<generated>)
+	at tk.mybatis.mapper.autoconfigure.MapperAutoConfiguration$$EnhancerBySpringCGLIB$$893ca376$$FastClassBySpringCGLIB$$d3ccf027.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at tk.mybatis.mapper.autoconfigure.MapperAutoConfiguration$$EnhancerBySpringCGLIB$$893ca376.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 57 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/yang/Documents/IdeaProjects/springcloud-alibaba-base/alibaba-cloud-provider-demo/target/classes/mapper/UserMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.springboot.pojo.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.springboot.pojo.User
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:521)
+	... 70 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.springboot.pojo.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.springboot.pojo.User
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:68)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:135)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:128)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118)
+	... 72 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.example.springboot.pojo.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.example.springboot.pojo.User
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 76 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.example.springboot.pojo.User
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 78 common frames omitted
+2020-04-20 17:26:59 -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-04-20 17:28:13 -The following profiles are active: dev
+2020-04-20 17:28:13 -BeanFactory id=05427765-2919-34f3-9f2d-d20638feede0
+2020-04-20 17:28:13 -Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$2c8001ff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-20 17:28:13 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1065ff02] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-20 17:28:13 -Tomcat initialized with port(s): 9090 (http)
+2020-04-20 17:28:13 -Initializing ProtocolHandler ["http-nio-9090"]
+2020-04-20 17:28:13 -Starting service [Tomcat]
+2020-04-20 17:28:13 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-04-20 17:28:13 -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/yang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2020-04-20 17:28:13 -Initializing Spring embedded WebApplicationContext
+2020-04-20 17:28:13 -Root WebApplicationContext: initialization completed in 897 ms
+2020-04-20 17:28:14 -No URLs will be polled as dynamic configuration sources.
+2020-04-20 17:28:14 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-20 17:28:14 -No URLs will be polled as dynamic configuration sources.
+2020-04-20 17:28:14 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-20 17:28:14 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-20 17:28:14 -Initializing ExecutorService
+2020-04-20 17:28:14 -Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-04-20 17:28:14 -Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-04-20 17:28:14 -Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-04-20 17:28:14 -Clear EntityHelper entityTableMap cache.
+2020-04-20 17:28:14 -Starting ProtocolHandler ["http-nio-9090"]
+2020-04-20 17:28:14 -Tomcat started on port(s): 9090 (http) with context path ''
+2020-04-20 17:28:15 -nacos registry, alibaba-cloud-provider 192.168.199.125:9090 register finished
+2020-04-20 17:28:15 -Started ProviderApplication in 2.832 seconds (JVM running for 3.356)
+2020-04-20 17:28:22 -De-registering from Nacos Server now...
+2020-04-20 17:28:22 -De-registration finished.
+2020-04-20 17:28:22 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-20 17:28:27 -The following profiles are active: dev
+2020-04-20 17:28:27 -BeanFactory id=05427765-2919-34f3-9f2d-d20638feede0
+2020-04-20 17:28:27 -Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$550335fd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-20 17:28:27 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$38e93300] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-20 17:28:27 -Tomcat initialized with port(s): 9090 (http)
+2020-04-20 17:28:27 -Initializing ProtocolHandler ["http-nio-9090"]
+2020-04-20 17:28:27 -Starting service [Tomcat]
+2020-04-20 17:28:27 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-04-20 17:28:27 -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/yang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2020-04-20 17:28:28 -Initializing Spring embedded WebApplicationContext
+2020-04-20 17:28:28 -Root WebApplicationContext: initialization completed in 950 ms
+2020-04-20 17:28:28 -No URLs will be polled as dynamic configuration sources.
+2020-04-20 17:28:28 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-20 17:28:28 -No URLs will be polled as dynamic configuration sources.
+2020-04-20 17:28:28 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-20 17:28:28 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-20 17:28:28 -Initializing ExecutorService
+2020-04-20 17:28:28 -Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-04-20 17:28:28 -Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-04-20 17:28:28 -Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-04-20 17:28:28 -Clear EntityHelper entityTableMap cache.
+2020-04-20 17:28:29 -Starting ProtocolHandler ["http-nio-9090"]
+2020-04-20 17:28:29 -Tomcat started on port(s): 9090 (http) with context path ''
+2020-04-20 17:28:29 -nacos registry, alibaba-cloud-provider 192.168.199.125:9090 register finished
+2020-04-20 17:28:29 -Started ProviderApplication in 2.886 seconds (JVM running for 3.442)
+2020-04-20 17:29:21 -No active profile set, falling back to default profiles: default
+2020-04-20 17:29:22 -Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format.
+2020-04-20 17:29:22 -Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-20 17:29:22 -BeanFactory id=8b0d7cd3-15cf-35d5-8118-28d9286ad6e5
+2020-04-20 17:29:22 -Bean 'com.example.consumer.feign.UserFeignService' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-20 17:29:22 -Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$c50f118b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-20 17:29:22 -Tomcat initialized with port(s): 9095 (http)
+2020-04-20 17:29:22 -Initializing ProtocolHandler ["http-nio-9095"]
+2020-04-20 17:29:22 -Starting service [Tomcat]
+2020-04-20 17:29:22 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-04-20 17:29:22 -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/yang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2020-04-20 17:29:23 -Initializing Spring embedded WebApplicationContext
+2020-04-20 17:29:23 -Root WebApplicationContext: initialization completed in 1147 ms
+2020-04-20 17:29:23 -No URLs will be polled as dynamic configuration sources.
+2020-04-20 17:29:23 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-20 17:29:23 -No URLs will be polled as dynamic configuration sources.
+2020-04-20 17:29:23 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-20 17:29:23 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-20 17:29:23 -Initializing ExecutorService
+2020-04-20 17:29:24 -Exposing 20 endpoint(s) beneath base path '/actuator'
+2020-04-20 17:29:24 -Starting ProtocolHandler ["http-nio-9095"]
+2020-04-20 17:29:24 -Tomcat started on port(s): 9095 (http) with context path ''
+2020-04-20 17:29:24 -nacos registry, alibaba-cloud-consumer 192.168.199.125:9095 register finished
+2020-04-20 17:29:24 -Started ConsumerApplication in 3.182 seconds (JVM running for 3.718)
+2020-04-20 17:29:24 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-20 17:29:24 -Initializing Servlet 'dispatcherServlet'
+2020-04-20 17:29:24 -Completed initialization in 6 ms
+2020-04-20 17:29:30 -Flipping property: alibaba-cloud-provider.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-04-20 17:29:30 -Client: alibaba-cloud-provider instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=alibaba-cloud-provider,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-04-20 17:29:30 -Using serverListUpdater PollingServerListUpdater
+2020-04-20 17:29:30 -Flipping property: alibaba-cloud-provider.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-04-20 17:29:30 -DynamicServerListLoadBalancer for client alibaba-cloud-provider initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=alibaba-cloud-provider,current list of Servers=[192.168.199.125:9090],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.199.125:9090;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.alibaba.nacos.ribbon.NacosServerList@4612c976
+2020-04-20 17:29:30 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-20 17:29:30 -Initializing Servlet 'dispatcherServlet'
+2020-04-20 17:29:30 -Completed initialization in 7 ms
+2020-04-20 17:29:31 -HikariPool-1 - Starting...
+2020-04-20 17:29:31 -Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-04-20 17:29:31 -HikariPool-1 - Start completed.
+2020-04-20 17:29:31 -数据查询成功！
+2020-04-20 17:29:31 -Flipping property: alibaba-cloud-provider.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-04-20 17:29:34 -De-registering from Nacos Server now...
+2020-04-20 17:29:34 -De-registration finished.
+2020-04-20 17:29:34 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-20 17:29:34 -HikariPool-1 - Shutdown initiated...
+2020-04-20 17:29:34 -HikariPool-1 - Shutdown completed.
+2020-04-20 17:29:50 -The following profiles are active: dev
+2020-04-20 17:29:50 -BeanFactory id=05427765-2919-34f3-9f2d-d20638feede0
+2020-04-20 17:29:51 -Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$cf233840] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-20 17:29:51 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b3093543] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-20 17:29:51 -Tomcat initialized with port(s): 9090 (http)
+2020-04-20 17:29:51 -Initializing ProtocolHandler ["http-nio-9090"]
+2020-04-20 17:29:51 -Starting service [Tomcat]
+2020-04-20 17:29:51 -Starting Servlet engine: [Apache Tomcat/9.0.16]
+2020-04-20 17:29:51 -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/yang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2020-04-20 17:29:51 -Initializing Spring embedded WebApplicationContext
+2020-04-20 17:29:51 -Root WebApplicationContext: initialization completed in 972 ms
+2020-04-20 17:29:51 -No URLs will be polled as dynamic configuration sources.
+2020-04-20 17:29:51 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-20 17:29:51 -No URLs will be polled as dynamic configuration sources.
+2020-04-20 17:29:51 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-20 17:29:51 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-20 17:29:52 -Initializing ExecutorService
+2020-04-20 17:29:52 -Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-04-20 17:29:52 -Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-04-20 17:29:52 -Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-04-20 17:29:52 -Clear EntityHelper entityTableMap cache.
+2020-04-20 17:29:52 -Starting ProtocolHandler ["http-nio-9090"]
+2020-04-20 17:29:52 -Tomcat started on port(s): 9090 (http) with context path ''
+2020-04-20 17:29:52 -nacos registry, alibaba-cloud-provider 192.168.199.125:9090 register finished
+2020-04-20 17:29:52 -Started ProviderApplication in 3.045 seconds (JVM running for 3.651)
+2020-04-20 17:30:01 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-20 17:30:01 -Initializing Servlet 'dispatcherServlet'
+2020-04-20 17:30:01 -Completed initialization in 6 ms
+2020-04-20 17:30:01 -HikariPool-1 - Starting...
+2020-04-20 17:30:01 -Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-04-20 17:30:01 -HikariPool-1 - Start completed.
+2020-04-20 17:30:01 -数据查询成功！
+2020-04-20 17:31:58 -De-registering from Nacos Server now...
+2020-04-20 17:31:58 -De-registration finished.
+2020-04-20 17:31:58 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-20 17:31:58 -HikariPool-1 - Shutdown initiated...
+2020-04-20 17:31:58 -HikariPool-1 - Shutdown completed.
+2020-04-20 17:32:00 -Shutting down the Executor Pool for PollingServerListUpdater
+2020-04-20 17:32:00 -De-registering from Nacos Server now...
+2020-04-20 17:32:00 -De-registration finished.
+2020-04-20 17:32:00 -Shutting down ExecutorService 'applicationTaskExecutor'
