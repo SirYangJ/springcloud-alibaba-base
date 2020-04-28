@@ -76,7 +76,12 @@ public class UserController {
     }
     @RequestMapping(value = "/api/testRibbon")
     public String testRibbon(){
-        System.out.println("provider");
-        return "provider";
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("provider2");
+        return "provider2";
     }
 }

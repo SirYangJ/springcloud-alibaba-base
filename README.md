@@ -5,3 +5,7 @@ springcloud-alibaba使用了nacos作为订阅中心，Feign作为远程调用
 #项目启动
 创建test数据库，执行test.sql脚本
 项目启动前要先启动nacos，对应修改consumer和provider子项目的nacos的配置
+#负载均衡
+该项目有两个provider-demo，做provider的负载均衡，该负载均衡为feign客户端负载均衡。
+两个provider-demo唯一区别就是端口不一样，作为负载均衡，他们只需保持spring.application.name一样即可。
+因为feign默认就实现ribbon了负载均衡。负载均衡默认策略是ZoneAvoidanceRule:复合判断server所在区域的性能和server的可用性选择server

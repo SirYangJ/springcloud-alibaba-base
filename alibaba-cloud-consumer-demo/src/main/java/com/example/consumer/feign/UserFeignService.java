@@ -11,4 +11,7 @@ import java.util.Map;
 public interface UserFeignService {
     @RequestMapping(value = "/api/query")
     Map queryById(@RequestBody User user);
+
+    @RequestMapping(value = "/api/testRibbon")
+    String testRibbon();
 }

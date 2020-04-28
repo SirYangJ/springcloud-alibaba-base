@@ -19,5 +19,10 @@ public class UserConsumerController {
         Map map = userFeignService.queryById(user);
         return map;
     }
+    @RequestMapping("/testRibbon")
+    public String query() {
+        String result=userFeignService.testRibbon();
+        return result;
+    }
 
 }
